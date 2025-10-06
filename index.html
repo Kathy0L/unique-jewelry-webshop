@@ -3,10 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Unique Jewerly</title>
+
 </head>
+
+
 <body>
-    <p>Hello world</p>
+    <!-- ========================= -->
+     <!-- header -->
+    <!-- Top-Bar: Logotyp + ikoner -->
+    <!-- ========================= -->
+     <header class="top-bar"></header>
+     <div class="logo">
+        <img src="imges/My_logo.png" alt="Unique Jewelry logotyp">
+     </div>
+
+     <!-- Ikoner för funktioner (hjärta, varukorg, språk) -->
+       <div class="icons">
+      <button aria-label="Gilla"><img src="assets/heart-icon.svg" alt="Gilla ikon"></button>
+      <button aria-label="Varukorg"><img src="assets/cart-icon.svg" alt="Varukorg ikon"></button>
+      <button aria-label="Språkväxling">EN / SV</button>
+    </div>
+  </header>
+
+   <main>
+
+    <!-- ============================= -->
+    <!-- BILDSPEL -->
+    <!-- Här börjar main med sektioner  -->
+    <!-- ============================= -->
+    <section id="home" class="slideshow">
+      <!-- Här kommer bildspelet (JavaScript eller CSS-baserat) -->
+      <img src="images/slideshow1.jpg" alt="Smycken i guld" class="active">
+      <img src="images/slideshow2.jpg" alt="Smycken i silver">
+      <img src="images/slideshow3.jpg" alt="Smycken i platina">
+    </section>
+
+    <!-- ============================= -->
+    <!-- INFO-SEKTION MED 4 CIRKLAR -->
+    <!-- ============================= -->
+    <!-- Sektion(parent) till Items -->
+    <section class="info-circles">
+        <!-- Articel Premium Quality -->
+      <article class="info-item">
+        <img src="assets/quality-icon.svg" alt="Premium Quality ikon">
+        <h3>Premium Quality</h3>
+        <p>Handcrafted with the finest materials</p>
+      </article>
+      <!-- Article Lifetime waranty -->
+      <article class="info-item">
+        <img src="assets/warranty-icon.svg" alt="Lifetime Warranty ikon">
+        <h3>Lifetime Warranty</h3>
+        <p>Protected against manufacturing defects</p>
+      </article>
+      <!-- article Free shipping -->
+      <article class="info-item">
+        <img src="assets/shipping-icon.svg" alt="Free Shipping ikon">
+        <h3>Free Shipping</h3>
+        <p>On orders over $500</p>
+      </article>
+      <!-- Artikel Certified Authentic  -->
+      <article class="info-item">
+        <img src="assets/certificate-icon.svg" alt="Certified Authentic ikon">
+        <h3>Certified Authentic</h3>
+        <p>Every piece comes with certification</p>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- PRODUKTKATEGORIER (4 bilder) -->
+    <!-- ============================= -->
+     <!-- Sektion för categories -->
+    <section id="shop" class="categories">
+      <h2>Shop by Type</h2>
+      <div class="category-grid">
+        <!-- Article necklaces -->
+        <article>
+          <img src="images/necklace.jpg" alt="Necklaces">
+          <h3>Necklaces</h3>
+        </article>
+        <!-- Articel Eearings -->
+        <article>
+          <img src="images/earrings.jpg" alt="Earrings">
+          <h3>Earrings</h3>
+        </article>
+        <!-- Article Rings -->
+        <article>
+          <img src="images/rings.jpg" alt="Rings">
+          <h3>Rings</h3>
+        </article>
+        <!-- Article Bracelets -->
+        <article>
+          <img src="images/bracelets.jpg" alt="Bracelets">
+          <h3>Bracelets</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- NYA PRODUKTER -->
+    <!-- ============================= -->
+    <section class="new-products">
+      <h2>New Arrivals</h2>
+      <div class="product-grid">
+        <!-- Vi lägger in produkter senare -->
+        <!--
+        <article class="product">
+          <img src="images/product1.jpg" alt="Guldring med diamanter">
+          <h3>Diamond Gold Ring</h3>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- KOLLEKTIONER (3 bilder) -->
+    <!-- ============================= -->
+    <section id="collections" class="collections">
+      <h2>Our Collections</h2>
+      <div class="collection-grid">
+        <!-- Article for gold -->
+        <article>
+          <img src="images/gold.jpg" alt="Gold Collection">
+          <h3>Gold</h3>
+        </article>
+        <!-- article silver -->
+        <article>
+          <img src="images/silver.jpg" alt="Silver Collection">
+          <h3>Silver</h3>
+        </article>
+        <!-- article platinum -->
+        <article>
+          <img src="images/platinum.jpg" alt="Platinum Collection">
+          <h3>Platinum</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+    <!-- ============================= -->
+  <!-- FOOTER -->
+  <!-- ============================= -->
+  <footer>
+    <p>&copy; 2025 Unique Jewelry | All rights reserved.</p>
+    <p>Follow us on:
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </p>
+  </footer>
+
+</body>
+</html>
+
+
+
     
 </body>
 </html>
