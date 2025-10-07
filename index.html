@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Jewerly</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 
@@ -11,153 +14,286 @@
 <body>
     <!-- ========================= -->
      <!-- header -->
-    <!-- Top-Bar: Logotyp + ikoner -->
     <!-- ========================= -->
-     <header class="top-bar"></header>
-     <div class="logo">
-        <img src="imges/My_logo.png" alt="Unique Jewelry logotyp">
-     </div>
-
-     <!-- Ikoner för funktioner (hjärta, varukorg, språk) -->
-       <div class="icons">
-      <button aria-label="Gilla"><img src="assets/heart-icon.svg" alt="Gilla ikon"></button>
-      <button aria-label="Varukorg"><img src="assets/cart-icon.svg" alt="Varukorg ikon"></button>
-      <button aria-label="Språkväxling">EN / SV</button>
+   <header class="nav-bar">
+  <div class="nav-bar-content">
+    <!-- Logotyp -->
+    <div class="logo">
+      <img src="assests/My_logo.png" alt="Unique Jewelry logotyp" loading="lazy">
     </div>
-  </header>
 
+    <!-- Navigationsmeny -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Hem</a></li>
+        <li><a href="#">Smycken</a></li>
+        <li><a href="#">Kollektioner</a></li>
+        <li><a href="#">Om oss</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Ikoner -->
+    <div class="icons">
+  <button aria-label="Gilla">
+    <span class="material-symbols-outlined">favorite</span>
+  </button>      
+   <!-- Varukorg / Cart ikon -->
+  <button aria-label="Varukorg">
+    <span class="material-symbols-outlined">shopping_cart</span>
+  </button>
+
+ <!-- Språkväxling -->
+  <button aria-label="Språkväxling">EN / SV</button>
+  </div>
+      </div>
+</header>
    <main>
 
     <!-- ============================= -->
     <!-- BILDSPEL -->
-    <!-- Här börjar main med sektioner  -->
     <!-- ============================= -->
-    <section id="home" class="slideshow">
-      <!-- Här kommer bildspelet (JavaScript eller CSS-baserat) -->
-      <img src="images/slideshow1.jpg" alt="Smycken i guld" class="active">
-      <img src="images/slideshow2.jpg" alt="Smycken i silver">
-      <img src="images/slideshow3.jpg" alt="Smycken i platina">
-    </section>
+<section class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+        <img src="imges/Image_Hero1.png" alt="Smycken Halsband" loading="lazy">
+      </li>
+      <li class="splide__slide">
+        <img src="imges/image_Hero2.png" alt="Smycken Ring " loading="lazy">
+      </li>
+      <li class="splide__slide">
+        <img src="imges/image_Hero3.png" alt="Smycken örhänge " loading="lazy">
+      </li>
+            <li class="splide__slide">
+        <img src="imges/image_Hero4.png" alt="Smycken Ring" loading="lazy">
+      </li>
+		</ul>
+  </div>
+</section>
 
     <!-- ============================= -->
     <!-- INFO-SEKTION MED 4 CIRKLAR -->
     <!-- ============================= -->
-    <!-- Sektion(parent) till Items -->
     <section class="info-circles">
-        <!-- Articel Premium Quality -->
       <article class="info-item">
-        <img src="assets/quality-icon.svg" alt="Premium Quality ikon">
-        <h3>Premium Quality</h3>
-        <p>Handcrafted with the finest materials</p>
+<span class="material-symbols-outlined">stars_2</span>        
+        <h3>Premium Kvalitet</h3>
+        <p>Tillverkad med de finaste materialen</p>
       </article>
-      <!-- Article Lifetime waranty -->
+
       <article class="info-item">
-        <img src="assets/warranty-icon.svg" alt="Lifetime Warranty ikon">
-        <h3>Lifetime Warranty</h3>
-        <p>Protected against manufacturing defects</p>
+        <span class="material-symbols-outlined">shield</span>
+        <h3>Livstidsgaranti</h3>
+        <p>Skyddad mot tillverkningsfel</p>
       </article>
-      <!-- article Free shipping -->
+
       <article class="info-item">
-        <img src="assets/shipping-icon.svg" alt="Free Shipping ikon">
-        <h3>Free Shipping</h3>
-        <p>On orders over $500</p>
+        <span class="material-symbols-outlined">local_shipping</span>
+        <h3>Fri frakt</h3>
+        <p>På beställningar över 500kr</p>
       </article>
-      <!-- Artikel Certified Authentic  -->
+
       <article class="info-item">
-        <img src="assets/certificate-icon.svg" alt="Certified Authentic ikon">
-        <h3>Certified Authentic</h3>
-        <p>Every piece comes with certification</p>
+        <span class="material-symbols-outlined">verified</span>
+        <h3>Certifierad autentisk</h3>
+        <p>Varje del levereras med certifiering</p>
       </article>
     </section>
 
-    <!-- ============================= -->
-    <!-- PRODUKTKATEGORIER (4 bilder) -->
-    <!-- ============================= -->
-     <!-- Sektion för categories -->
-    <section id="shop" class="categories">
-      <h2>Shop by Type</h2>
-      <div class="category-grid">
-        <!-- Article necklaces -->
-        <article>
-          <img src="images/necklace.jpg" alt="Necklaces">
-          <h3>Necklaces</h3>
-        </article>
-        <!-- Articel Eearings -->
-        <article>
-          <img src="images/earrings.jpg" alt="Earrings">
-          <h3>Earrings</h3>
-        </article>
-        <!-- Article Rings -->
-        <article>
-          <img src="images/rings.jpg" alt="Rings">
-          <h3>Rings</h3>
-        </article>
-        <!-- Article Bracelets -->
-        <article>
-          <img src="images/bracelets.jpg" alt="Bracelets">
-          <h3>Bracelets</h3>
-        </article>
-      </div>
-    </section>
+<!-- ============================= -->
+<!-- PRODUKTKATEGORIER -->
+<!-- ============================= -->
+<section class="category-rectangles">
+  <div class="category-grid-rect">
+    <!--  Ringar -->
+    <article class="category-card">
+      <img src="imges/Catagory_rings.png" alt="Ringar">
+      <div class="overlay-text">Ringar</div>
+    </article>
+    <!--  Armband -->
+    <article class="category-card">
+      <img src="imges/Catagory_braclet.png" alt="Armband">
+      <div class="overlay-text">Armband</div>
+    </article>
+    <!--  Halsband -->
+    <article class="category-card">
+      <img src="imges/Catagory_Necklaces.png" alt="Halsband">
+      <div class="overlay-text">Halsband</div>
+    </article>
+    <!--  Örhängen -->
+    <article class="category-card">
+      <img src="imges/Catagory_earings.png" alt="Örhängen">
+      <div class="overlay-text">Örhängen</div>
+    </article>
+  </div>
+</section>
+
 
     <!-- ============================= -->
     <!-- NYA PRODUKTER -->
     <!-- ============================= -->
-    <section class="new-products">
-      <h2>New Arrivals</h2>
-      <div class="product-grid">
-        <!-- Vi lägger in produkter senare -->
-        <!--
-        <article class="product">
-          <img src="images/product1.jpg" alt="Guldring med diamanter">
-          <h3>Diamond Gold Ring</h3>
-        </article>
-        -->
-      </div>
-    </section>
+<section class="new-products">
+  <h2>New Arrivals</h2>
+  <div class="splide new-products-splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <!-- Produkt 1 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="imges/Product_1.png" alt="Product gold Necklace">
+            <h3>Gold Necklace</h3>
+            <p>250 SEK</p>
+          </article>
+        </li>
+        <!-- Produkt 2 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="/imges/Product _2.png" alt="Product silver ring">
+            <h3>Silver ring</h3>
+            <p>200 SEK</p>
+          </article>
+        </li>
+        <!-- Produkt 3 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="/imges/Product_3.png" alt="Product Diamond ring">
+            <h3>Diamond Ring</h3>
+            <p>200 SEK</p>
+          </article>
+        </li>
+        <!-- Produkt 4 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="/imges/Product_4.png" alt="Product platinum Bracelet">
+            <h3>Platinum Bracelet</h3>
+            <p>299 SEK</p>
+          </article>
+        </li>
+        <!-- Produkt 5 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="/imges/Product_5.png" alt="Product Guld örhänge">
+            <h3>Guld örhänge</h3>
+            <p>249SEK</p>
+          </article>
+        </li>
+        <!-- Produkt 6 -->
+        <li class="splide__slide">
+          <article class="product-card">
+            <img src="/imges/Product_6.png" alt="Product silver Necklace">
+            <h3>Silver Necklace</h3>
+            <p>299SEK</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- ============================= -->
-    <!-- KOLLEKTIONER (3 bilder) -->
-    <!-- ============================= -->
-    <section id="collections" class="collections">
-      <h2>Our Collections</h2>
-      <div class="collection-grid">
-        <!-- Article for gold -->
-        <article>
-          <img src="images/gold.jpg" alt="Gold Collection">
-          <h3>Gold</h3>
-        </article>
-        <!-- article silver -->
-        <article>
-          <img src="images/silver.jpg" alt="Silver Collection">
-          <h3>Silver</h3>
-        </article>
-        <!-- article platinum -->
-        <article>
-          <img src="images/platinum.jpg" alt="Platinum Collection">
-          <h3>Platinum</h3>
-        </article>
-      </div>
-    </section>
-  </main>
+ <!-- ============================= -->
+<!-- KOLLEKTIONER (3 färgade placeholders) -->
+<!-- ============================= -->
+<section id="collections" class="collections">
+  <h2>Our Collections</h2>
+  <div class="collection-grid">
+    <!-- Guld -->
+    <article class="collection-card gold">
+      <div class="overlay-text">Guld</div>
+      <img src="imges/Collection_gold.png" alt="Gold Collection">
+    </article>
+    <!-- Silver -->
+    <article class="collection-card silver">
+      <div class="overlay-text">Silver</div>
+      <img src="imges/Collection_silverr.png" alt="Silver Collection">
+    </article>
+    <!-- Platinum -->
+    <article class="collection-card platinum">
+      <div class="overlay-text">Platinum</div>
+      <img src="/imges/Collection_plantium.png" alt="Platinum Collection">
+    </article>
+  </div>
+</section>
 
     <!-- ============================= -->
   <!-- FOOTER -->
   <!-- ============================= -->
-  <footer>
-    <p>&copy; 2025 Unique Jewelry | All rights reserved.</p>
-    <p>Follow us on:
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">TikTok</a>
-    </p>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+ <div class="footer-about">
+  <div class="footer-logo">
+    <img src="/assests/My_logo.png" alt="Unique Jewelry Logo">
+  </div>
+  <h2>Unique Jewelry</h2>
+  <p>Exquisite handcrafted jewelry for every occasion</p>
+</div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <!-- Connect -->
+    <div class="footer-contact">
+      <h4>Connect</h4>
+      <p>Email: <a href="mailto:info@uniquejewelry.com">info@uniquejewelry.com</a></p>
+      <p>Phone: +1 (555) 123-4567</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Unique Jewelry. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- //Dom Script Init -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.splide', {
+      type      : 'loop',      // loopar slides
+      perPage   : 1,           // en bild åt gången
+      autoplay  : true,        // autoplay på
+      interval  : 3000,        // 5000 ms = 5 sekunder
+      pauseOnHover: true,      // pausa vid hover
+      pagination: true,        // visar punkter
+      arrows    : true,        // visar pilar
+    }).mount();
+  });
+// ==========================================
+  document.addEventListener('DOMContentLoaded', function () {
+  // Splide för New Arrivals
+  new Splide('.new-products-splide', {
+    type      : 'loop',
+    perPage   : 3,        // antal produkter synliga på desktop
+    perMove   : 1,
+    gap       : '1rem',
+    autoplay  : true,
+    interval  : 4000,
+    pauseOnHover: true,
+    arrows    : true,
+    pagination: false,
+    breakpoints: {
+      860: { perPage: 2 },
+      600: { perPage: 1 }
+    }
+  }).mount();
+});
+</script>
+
 
 </body>
 </html>
 
 
 
-    
-</body>
-</html>
+
