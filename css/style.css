@@ -555,3 +555,32 @@ body {
     margin-top: 1.5rem;
   }
 }
+/* ============= */
+.splide {
+  width: 100vw;            /* full width */
+  max-width: 100%;         /* säkerställ att det inte går över */
+  overflow: hidden;         /* undvik scrollbars */
+}
+
+.splide__track {
+  width: 100%;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 550px;           /* justera höjden efter behov */
+  object-fit: cover;       /* så bilden fyller rutan utan att förvrängas */
+}
+
+/* Responsivt: mindre höjd på mobil */
+@media (max-width: 860px) {
+  .splide__slide img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .splide__slide img {
+    height: 250px;
+  }
+}
