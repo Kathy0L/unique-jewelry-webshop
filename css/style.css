@@ -573,10 +573,18 @@ body{
   width: 100%;
 }
 
-.splide__slide img {
+/* Hero slideshow */
+.splide:not(.new-products-splide) img {
+  height: 500px;
+  object-fit: cover;
   width: 100%;
-  height: 250px;           /* justera höjden efter behov */
-  object-fit: cover;       /* så bilden fyller rutan utan att förvrängas */
+}
+
+/* New arrivals carousel */
+.new-products-splide img {
+  height: 290px;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* Responsivt: mindre höjd på mobil */
