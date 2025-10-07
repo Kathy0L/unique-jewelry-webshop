@@ -1,25 +1,30 @@
 /* =============================== */
 /* CSS RESET  */
 /* =============================== */
-/* Reset default styles and ensure consistency */
+
+/* Nollställer alla marginaler och padding, box-sizing gör att padding/border räknas in i bredd/höjd */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Remove list styles */
+/* Tar bort punkter och siffror från listor */
 ul, ol {
   list-style: none;
 }
 
-/* Remove default link styling */
+/* Tar bort understrykning och färg på länkar */
 a {
   text-decoration: none;
   color: inherit;
 }
- 
-/* Normalize typography */
+
+/* =============================== */
+/* Bas-typografi och bakgrund */
+/* =============================== */
+
+/* Basinställningar för body: font, färg och bakgrund */
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -30,50 +35,50 @@ body {
   padding: 0;
 }
 
-/* Remove button defaults */
+/* Tar bort standardstil på knappar */
 button {
   all: unset;
   cursor: pointer;
 }
 
-/* Ensure media elements don’t overflow */
+/* Bilder och videos anpassas till sin container */
 img, video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Remove default form styles */
+/* Tar bort standardformstilar */
 input, textarea, select {
   font: inherit;
   border: none;
   outline: none;
 }
 
-/* Set up smooth scrolling */
+/* Smooth scroll för hela sidan */
 html {
   scroll-behavior: smooth;
 }
 
-/* Fix height issues on mobile */
+/* Fixar höjdproblem på mobil */
 html, body {
   height: 100%;
   background-color: #F5E6CA;
 }
 
+/* Säkerställer minsta höjd på body */
 body {
   html, body {
     height: auto;
     min-height: 100%;
   }
 }
-/* ========================================================================= */
-/* CSS start här */
 
-body{
-    background-color:#F5E6CA;
-}
-/* ========== Nav BAR SECTION ========== */
+/* =============================== */
+/* NAVIGATION BAR SECTION */
+/* =============================== */
+
+/* Sticky navbar som alltid ligger högst upp */
 .nav-bar {
   position: sticky;
   top: 0;
@@ -85,28 +90,34 @@ body{
   z-index: 1000;
 }
 
+/* Flexbox för navbarens innehåll */
 .nav-bar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 1.2rem 2.5rem;   
-  height: 80px;  
+  padding: 1.2rem 2.5rem;
+  height: 80px;
 }
-/* ====== Logotyp  ====== */
+
+/* ===== Logo ===== */
+/* Bild för loggan */
 .logo img {
-  height: 135px;              
+  height: 135px;
   width: auto;
   display: block;
 }
-/* ====== Navigationsmeny ====== */
+
+/* ===== Huvudmeny ===== */
+/* Flexlista med meny-länkar */
 .main-nav ul {
   display: flex;
   gap: 2.5rem;
   list-style: none;
 }
 
+/* Länkstil */
 .main-nav a {
   color: #222;
   font-weight: 500;
@@ -115,23 +126,27 @@ body{
   transition: color 0.3s, transform 0.2s;
 }
 
+/* Hover-effekt på länkar */
 .main-nav a:hover {
   color: #c19a6b;
   transform: scale(1.05);
 }
 
-/* ====== Ikoner ====== */
+/* ===== Ikoner ===== */
+/* Flexbox för ikoner */
 .icons {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
+/* Storlek på ikoner */
 .icons img {
   width: 22px;
   height: 22px;
 }
 
+/* Knappar för ikoner */
 .icons button {
   background: none;
   border: none;
@@ -139,10 +154,12 @@ body{
   transition: transform 0.2s ease;
 }
 
+/* Hover-effekt på ikon-knappar */
 .icons button:hover {
   transform: scale(1.15);
 }
 
+/* Sista knappen i icons får specialstil */
 .icons button:last-child {
   font-weight: 600;
   color: #3E2723;
@@ -150,43 +167,37 @@ body{
 }
 
 /* ========================= */
-/* RESPONSIVE DESIGN */
+/* RESPONSIV DESIGN */
 /* ========================= */
 
-/* -----  (under 860px) ----- */
+/* ----- under 860px ----- */
+/* Anpassning för tablet och mindre skärmar */
 @media (max-width: 860px) {
   .nav-bar-content {
-    flex-wrap: nowrap; /* behåll allt på samma rad */
-    justify-content: space-between; /* ge luft mellan element */
+    flex-wrap: nowrap;
+    justify-content: space-between;
     padding: 1rem 1.5rem;
   }
 
-  .logo img {
-    height: 90px; /* större än tidigare 80px, mindre än desktop */
-  }
+  .logo img { height: 90px; }
 
-  .main-nav ul {
-    gap: 2rem; /* lite luft mellan menyval */
-  }
+  .main-nav ul { gap: 2rem; }
 
-  .main-nav a {
-    font-size: 1rem; /* bibehåller läsbarhet */
-  }
+  .main-nav a { font-size: 1rem; }
 
-  .icons {
-    gap: 1rem; /* lite mer luft */
-  }
+  .icons { gap: 1rem; }
 
   /* Grid-sektioner */
   .info-circles,
   .category-grid,
   .collection-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; /* mer luft mellan items */
+    gap: 2rem;
   }
 }
 
-/* ----- För mindre skärmar / mobil (under 653px) ----- */
+/* ----- under 745px ----- */
+/* Mobilanpassning */
 @media (max-width: 745px) {
   .nav-bar-content {
     flex-direction: column;
@@ -196,68 +207,59 @@ body{
     gap: 1rem;
   }
 
-  .logo img {
-    height: 85px; /* medelstor logga, inte för liten */
-  }
+  .logo img { height: 85px; }
 
-  .main-nav ul {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+  .main-nav ul { flex-direction: column; gap: 0.8rem; }
 
-  .main-nav a {
-    font-size: 0.95rem;
-  }
+  .main-nav a { font-size: 0.95rem; }
 
-  .icons {
-    margin-top: 0.5rem;
-    gap: 0.8rem;
-  }
+  .icons { margin-top: 0.5rem; gap: 0.8rem; }
 
   .info-circles,
   .category-grid,
   .collection-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem; /* behåller luft */
+    gap: 1.5rem;
   }
 
   .info-item,
   .categories article,
-  .collections article {
-    text-align: center;
-  }
+  .collections article { text-align: center; }
 
-  h2 {
-    font-size: 1.4rem;
-  }
+  h2 { font-size: 1.4rem; }
 }
 
+/* ================= INFO CIRLES ================= */
+/* Sektion med info-ikoner och kort info */
 .info-circles {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 3rem 2rem;
-  background-color: #ffeef0; /* ljus bakgrund som på bilden */
+  background-color: #ffeef0;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
+/* Individuell info-bubbla */
 .info-item {
   text-align: center;
   max-width: 200px;
 }
 
+/* Ikon i bubbla */
 .info-item .material-symbols-outlined {
   display: inline-block;
-  background-color: #fdeedb; /* rund bakgrund */
+  background-color: #fdeedb;
   border-radius: 50%;
   padding: 1rem;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   font-size: 36px;
-  color: #e0b85c; /* ikonfärg */
+  color: #e0b85c;
   margin-bottom: 1rem;
 }
 
+/* Rubrik för info-item */
 .info-item h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
@@ -265,18 +267,21 @@ body{
   color: #222;
 }
 
+/* Text för info-item */
 .info-item p {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.4;
 }
 
-/*========================== New arivals================== */
+/* ================= NEW ARRIVALS ================= */
+/* Sektion för nya produkter */
 .new-products {
   padding: 3rem 2rem;
   background-color: #fff5ee;
 }
 
+/* Rubrik för nya produkter */
 .new-products h2 {
   text-align: center;
   font-size: 1.6rem;
@@ -284,6 +289,7 @@ body{
   color: #222;
 }
 
+/* Kort för varje produkt */
 .product-card {
   background-color: #fff;
   border-radius: 12px;
@@ -293,33 +299,39 @@ body{
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Produktbild */
 .product-card img {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
+/* Produktnamn */
 .product-card h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
+/* Produktpris */
 .product-card p {
   color: #c19a6b;
   font-weight: 600;
 }
 
+/* Hover-effekt på produktkort */
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* ================================================ */
+/* ================= COLLECTIONS ================= */
+/* Sektion för kollektioner */
 .collections {
   padding: 3rem 2rem;
   background-color: #FFF0F5;
 }
 
+/* Rubrik för kollektioner */
 .collections h2 {
   text-align: center;
   font-size: 1.6rem;
@@ -327,30 +339,27 @@ body{
   color: #222;
 }
 
+/* Grid med kollektioner */
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-/* =========================
-   Collections - rektangulära placeholders med färger
-   ========================= */
+/* Kort för kollektion */
 .collection-card {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-
-  /* Kvadratisk form */
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Overlay-text */
+/* Text över kollektionsbild */
 .collection-card .overlay-text {
   position: absolute;
   top: 50%;
@@ -363,75 +372,54 @@ body{
   pointer-events: none;
 }
 
-/* Hover-effekt */
+/* Hover-effekt på kollektion */
 .collection-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Placeholder-färger */
-.collection-card.gold {
-  background-color: #FFD700; /* guldfärg */
-}
+/* Placeholder färger */
+.collection-card.gold { background-color: #FFD700; }
+.collection-card.silver { background-color: #C0C0C0; }
+.collection-card.platinum { background-color: #E5E4E2; }
 
-.collection-card.silver {
-  background-color: #C0C0C0; /* silverfärg */
-}
-
-.collection-card.platinum {
-  background-color: #E5E4E2; /* platinumfärg */
-}
-
+/* Bild i kollektionskort */
 .collection-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Responsiv design */
-@media (max-width: 860px) {
-  .collection-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ======================= */
-/* Kategori-kort (Rings, Bracelets, Halsband, Earings) */
+/* ================= CATEGORY CARDS ================= */
+/* Grid för kategorier */
 .category-grid-rect {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   background-color: #FFF0F5;
-      padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* Kort styling */
+/* Kort för kategori */
 .category-card {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  
-  /* Rektangulär form: högre än bred */
-  aspect-ratio: 3/4; /* bredd : höjd = 3:4 */
+  aspect-ratio: 3/4;
 }
 
+/* Bild i kategori */
 .category-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* så att bilden fyller rektangeln */
+  object-fit: cover;
   border-radius: 12px;
 }
 
-/* Overlay-text */
+/* Text över kategori */
 .category-card .overlay-text {
   position: absolute;
   top: 50%;
@@ -444,55 +432,47 @@ body{
   pointer-events: none;
 }
 
-/* Hover-effekt */
+/* Hover-effekt på kategori */
 .category-card:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* Responsiv design */
-@media (max-width: 1024px) {
-  .category-grid-rect {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .category-grid-rect {
-    grid-template-columns: 1fr;
-  }
-}
-/* ====================== */
+/* ================= FOOTER ================= */
+/* Logo i footer */
 .footer-logo {
   text-align: center;
-  margin-bottom: 1rem; /* lite mellanrum mellan logo och texten */
+  margin-bottom: 1rem;
+  height: 100px;
 }
 
+/* Bild för footer logo */
 .footer-logo img {
-  height: 50px; 
+  height: 50px;
   width: auto;
   display: inline-block;
   object-fit: contain;
 }
 
-/* Resten av footerns CSS som tidigare */
+/* Footer-sektion */
 .site-footer {
-  background-color: #333; /* mörkgrå bakgrund */
-  color: #ccc; /* ljusgrå text */
+  background-color: #333;
+  color: #ccc;
   padding: 3rem 2rem 1rem 2rem;
   font-size: 0.95rem;
 }
 
+/* Länkstil i footer */
 .site-footer a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.site-footer a:hover {
-  color: #c19a6b; /* matcha guldfärg från design */
-}
+/* Hover-effekt på footer-länkar */
+.site-footer a:hover { color: #c19a6b; }
 
+/* Grid i footer */
 .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -501,22 +481,16 @@ body{
   margin: 0 auto;
 }
 
+/* Om oss i footer */
 .footer-about {
-  text-align: left; /* align text to the left */
+  text-align: left;
   display: flex;
-  flex-direction: column; /* stack logo, name, tagline */
-  align-items: flex-start; /* left-align everything */
-  gap: 0.5rem; /* space between logo, name, tagline */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
-.footer-logo img {
-  height: 100px; /* bigger logo */
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin-bottom: 0.5rem; /* optional extra space */
-}
-
+/* Rubriker i footer */
 .footer-links h4,
 .footer-contact h4 {
   margin-bottom: 0.5rem;
@@ -524,20 +498,18 @@ body{
   color: #fff;
 }
 
+/* Lista med länkar i footer */
 .footer-links ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links li {
-  margin-bottom: 0.4rem;
-}
+.footer-links li { margin-bottom: 0.4rem; }
 
-.footer-contact p {
-  margin-bottom: 0.4rem;
-}
+/* Kontaktinfo i footer */
+.footer-contact p { margin-bottom: 0.4rem; }
 
-/* Bottom section */
+/* Footer bottom text */
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
@@ -545,68 +517,31 @@ body{
   font-size: 0.85rem;
 }
 
-/* Responsiv design */
-@media (max-width: 860px) {
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-contact {
-    margin-top: 1.5rem;
-  }
-}
-/* ============= */
+/* ================= SPLIDE CAROUSEL ================= */
+/* Carousel container */
 .splide {
-  width: 100vw;            /* full width */
-  max-width: 100%;         /* säkerställ att det inte går över */
-  overflow: hidden;         /* undvik scrollbars */
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.splide__track {
-  width: 100%;
-}
+/* Track för slides */
+.splide__track { width: 100%; }
 
-/* Hero slideshow */
-.splide:not(.new-products-splide) img {
-  height: 500px;
-  object-fit: cover;
-  width: 100%;
-}
-
-/* New arrivals carousel */
-.new-products-splide img {
-  height: 290px;
-  object-fit: cover;
-  width: 100%;
-}
+/* Bildstorlek för carousel */
+.splide:not(.new-products-splide) img { height: 500px; object-fit: cover; width: 100%; }
+.new-products-splide img { height: 250px; object-fit: cover; width: 100%; }
 
 /* Responsivt: mindre höjd på mobil */
-@media (max-width: 860px) {
-  .splide__slide img {
-    height: 300px;
-  }
-}
+@media (max-width: 860px) { .splide__slide img { height: 300px; } }
+@media (max-width: 600px) { .splide__slide img { height: 250px; } }
 
-@media (max-width: 600px) {
-  .splide__slide img {
-    height: 250px;
-  }
-}
-/* ================= */
-/* =========================
-   CTA Button
-   ========================= */
+/* ================= CTA BUTTON ================= */
+/* Standard CTA-knapp */
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
-  background-color: #c19a6b; /* varm guldfärg */
+  background-color: #c19a6b;
   color: #fff;
   font-size: 1.05rem;
   font-weight: 600;
@@ -619,27 +554,23 @@ body{
   margin-top: 1rem;
 }
 
+/* Hover-effekt */
 .cta-button:hover {
-  background-color: #b28753;  /* mörkare guld */
+  background-color: #b28753;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Fokus-effekt */
 .cta-button:focus {
-  outline: 3px solid #ffeb99; 
+  outline: 3px solid #ffeb99;
   outline-offset: 3px;
 }
 
-/* Anpassning för mobil */
-@media (max-width: 600px) {
-  .cta-button {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
+/* Responsiv CTA-knapp */
+@media (max-width: 600px) { .cta-button { width: 100%; font-size: 1rem; } }
 
-/* Hero CTA */
-/* CTA button only for hero slideshow */
+/* Hero CTA över bild */
 .splide .hero-cta {
   position: absolute;
   top: 50%;
@@ -648,32 +579,30 @@ body{
   z-index: 10;
 }
 
+/* Hero knapp */
 .splide .hero-cta .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: transparent; /* no background */
-  color: #fff; /* white text */
+  background-color: transparent;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
-  text-align: center;
   border-radius: 8px;
-  border: 2px solid #fff; /* white border */
+  border: 2px solid #fff;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
+/* Hover på hero knapp */
 .splide .hero-cta .cta-button:hover {
-  background-color: #fff; /* white fill on hover */
-  color: #c19a6b; /* warm gold text on hover */
+  background-color: #fff;
+  color: #c19a6b;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
 
+/* Responsiv hero knapp */
 @media (max-width: 860px) {
-  .splide .hero-cta .cta-button {
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-  }
-
+  .splide .hero-cta .cta-button { font-size: 1rem; padding: 0.8rem 2rem; }
 }
