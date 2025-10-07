@@ -1,99 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Jewerly</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
-
 <body>
-    <!-- ========================= -->
-     <!-- header -->
-    <!-- ========================= -->
-   <header class="nav-bar">
-  <div class="nav-bar-content">
-    <!-- Logotyp -->
-    <div class="logo">
-      <img src="assets/My_logo.png" alt="Unique Jewelry logotyp" loading="lazy">
-    </div>
-
-    <!-- Navigationsmeny -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Hem</a></li>
-        <li><a href="#">Smycken</a></li>
-        <li><a href="#">Kollektioner</a></li>
-        <li><a href="#">Om oss</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
-
-    <!-- Ikoner -->
-    <div class="icons">
-  <button aria-label="Gilla">
-    <span class="material-symbols-outlined">favorite</span>
-  </button>      
-   <!-- Varukorg / Cart ikon -->
-  <button aria-label="Varukorg">
-    <span class="material-symbols-outlined">shopping_cart</span>
-  </button>
-
- <!-- Språkväxling -->
-  <button aria-label="Språkväxling">EN / SV</button>
-  </div>
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+  <header class="nav-bar">
+    <div class="nav-bar-content">
+      <!-- Logotyp -->
+      <div class="logo">
+        <img src="assets/My_logo.png" alt="Unique Jewelry logotyp" loading="lazy">
       </div>
-</header>
-   <main>
 
+      <!-- Navigationsmeny -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Smycken</a></li>
+          <li><a href="#">Kollektioner</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ikoner -->
+      <div class="icons">
+        <button aria-label="Gilla"><span class="material-symbols-outlined">favorite</span></button>
+        <button aria-label="Varukorg"><span class="material-symbols-outlined">shopping_cart</span></button>
+        <button aria-label="Språkväxling">EN / SV</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
     <!-- ============================= -->
     <!-- BILDSPEL -->
     <!-- ============================= -->
-<section class="splide" aria-label="Splide Basic HTML Example">
-  <div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">
-        <img src="images/Image_Hero1.png" alt="Smycken Halsband" loading="lazy">
-      </li>
-      <li class="splide__slide">
-        <img src="images/image_Hero2.png" alt="Smycken Ring " loading="lazy">
-      </li>
-      <li class="splide__slide">
-        <img src="images/image_Hero3.png" alt="Smycken örhänge " loading="lazy">
-      </li>
-            <li class="splide__slide">
-        <img src="images/image_Hero4.png" alt="Smycken Ring" loading="lazy">
-      </li>
-		</ul>
-  </div>
-</section>
+    <section class="splide" aria-label="Hero Slides">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="images/image_Hero1.png" alt="Smycken Halsband" loading="lazy"></li>
+          <li class="splide__slide"><img src="images/image_Hero2.png" alt="Smycken Ring" loading="lazy"></li>
+          <li class="splide__slide"><img src="images/image_Hero3.png" alt="Smycken örhänge" loading="lazy"></li>
+          <li class="splide__slide"><img src="images/image_Hero4.png" alt="Smycken Ring" loading="lazy"></li>
+        </ul>
+      </div>
+      <!-- Hero CTA -->
+      <div class="hero-cta">
+        <a href="#collections" class="cta-button" aria-label="Se våra kollektioner">Utforska Kollektioner</a>
+      </div>
+    </section>
+
+      <!-- Hero CTA -->
+
+    </section>
 
     <!-- ============================= -->
     <!-- INFO-SEKTION MED 4 CIRKLAR -->
     <!-- ============================= -->
     <section class="info-circles">
       <article class="info-item">
-<span class="material-symbols-outlined">stars_2</span>        
+        <span class="material-symbols-outlined">stars_2</span>
         <h3>Premium Kvalitet</h3>
         <p>Tillverkad med de finaste materialen</p>
       </article>
-
       <article class="info-item">
         <span class="material-symbols-outlined">shield</span>
         <h3>Livstidsgaranti</h3>
         <p>Skyddad mot tillverkningsfel</p>
       </article>
-
       <article class="info-item">
         <span class="material-symbols-outlined">local_shipping</span>
         <h3>Fri frakt</h3>
         <p>På beställningar över 500kr</p>
       </article>
-
       <article class="info-item">
         <span class="material-symbols-outlined">verified</span>
         <h3>Certifierad autentisk</h3>
@@ -101,199 +89,182 @@
       </article>
     </section>
 
-<!-- ============================= -->
-<!-- PRODUKTKATEGORIER -->
-<!-- ============================= -->
-<section class="category-rectangles">
-  <div class="category-grid-rect">
-    <!--  Ringar -->
-    <article class="category-card">
-      <img src="images/Catagory_rings.png" alt="Ringar">
-      <div class="overlay-text">Ringar</div>
-    </article>
-    <!--  Armband -->
-    <article class="category-card">
-      <img src="images/Catagory_braclet.png" alt="Armband">
-      <div class="overlay-text">Armband</div>
-    </article>
-    <!--  Halsband -->
-    <article class="category-card">
-      <img src="images/Catagory_Necklaces.png" alt="Halsband">
-      <div class="overlay-text">Halsband</div>
-    </article>
-    <!--  Örhängen -->
-    <article class="category-card">
-      <img src="images/Catagory_earings.png" alt="Örhängen">
-      <div class="overlay-text">Örhängen</div>
-    </article>
-  </div>
-</section>
-
+    <!-- ============================= -->
+    <!-- PRODUKTKATEGORIER -->
+    <!-- ============================= -->
+    <section class="category-rectangles">
+      <div class="category-grid-rect">
+        <article class="category-card">
+          <img src="images/Catagory_rings.png" alt="Ringar">
+          <div class="overlay-text">Ringar</div>
+        </article>
+        <article class="category-card">
+          <img src="images/Catagory_braclet.png" alt="Armband">
+          <div class="overlay-text">Armband</div>
+        </article>
+        <article class="category-card">
+          <img src="images/Catagory_Necklaces.png" alt="Halsband">
+          <div class="overlay-text">Halsband</div>
+        </article>
+        <article class="category-card">
+          <img src="images/Catagory_earings.png" alt="Örhängen">
+          <div class="overlay-text">Örhängen</div>
+        </article>
+      </div>
+    </section>
 
     <!-- ============================= -->
     <!-- NYA PRODUKTER -->
     <!-- ============================= -->
-<section class="new-products">
-  <h2>New Arrivals</h2>
-  <div class="splide new-products-splide">
-    <div class="splide__track">
-      <ul class="splide__list">
-        <!-- Produkt 1 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="images/Product_1.png" alt="Product gold Necklace">
-            <h3>Gold Necklace</h3>
-            <p>250 SEK</p>
-          </article>
-        </li>
-        <!-- Produkt 2 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="/images/Product _2.png" alt="Product silver ring">
-            <h3>Silver ring</h3>
-            <p>200 SEK</p>
-          </article>
-        </li>
-        <!-- Produkt 3 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="/images/Product_3.png" alt="Product Diamond ring">
-            <h3>Diamond Ring</h3>
-            <p>200 SEK</p>
-          </article>
-        </li>
-        <!-- Produkt 4 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="/images/Product_4.png" alt="Product platinum Bracelet">
-            <h3>Platinum Bracelet</h3>
-            <p>299 SEK</p>
-          </article>
-        </li>
-        <!-- Produkt 5 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="/images/Product_5.png" alt="Product Guld örhänge">
-            <h3>Guld örhänge</h3>
-            <p>249SEK</p>
-          </article>
-        </li>
-        <!-- Produkt 6 -->
-        <li class="splide__slide">
-          <article class="product-card">
-            <img src="/images/Product_6.png" alt="Product silver Necklace">
-            <h3>Silver Necklace</h3>
-            <p>299SEK</p>
-          </article>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
- <!-- ============================= -->
-<!-- KOLLEKTIONER (3 färgade placeholders) -->
-<!-- ============================= -->
-<section id="collections" class="collections">
-  <h2>Our Collections</h2>
-  <div class="collection-grid">
-    <!-- Guld -->
-    <article class="collection-card gold">
-      <div class="overlay-text">Guld</div>
-      <img src="images/Collection_gold.png" alt="Gold Collection">
-    </article>
-    <!-- Silver -->
-    <article class="collection-card silver">
-      <div class="overlay-text">Silver</div>
-      <img src="images/Collection_silverr.png" alt="Silver Collection">
-    </article>
-    <!-- Platinum -->
-    <article class="collection-card platinum">
-      <div class="overlay-text">Platinum</div>
-      <img src="/images/Collection_plantium.png" alt="Platinum Collection">
-    </article>
-  </div>
-</section>
+    <section class="new-products">
+      <h2>Nya varor</h2>
+      <div class="splide new-products-splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_1.png" alt="Gold Necklace">
+                <h3>Gold Necklace</h3>
+                <p>250 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Gold Necklace i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_2.png" alt="Silver Ring">
+                <h3>Silver Ring</h3>
+                <p>200 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Silver Ring i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_3.png" alt="Diamond Ring">
+                <h3>Diamond Ring</h3>
+                <p>200 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Diamond Ring i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_4.png" alt="Platinum Bracelet">
+                <h3>Platinum Bracelet</h3>
+                <p>299 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Platinum Bracelet i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_5.png" alt="Guld örhänge">
+                <h3>Guld örhänge</h3>
+                <p>249 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Guld örhänge i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="product-card">
+                <img src="images/Product_6.png" alt="Silver Necklace">
+                <h3>Silver Necklace</h3>
+                <p>299 SEK</p>
+                <a href="#" class="cta-button" aria-label="Lägg Silver Necklace i varukorgen">Köp Nu</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- ============================= -->
+    <!-- KOLLEKTIONER -->
+    <!-- ============================= -->
+    <section id="collections" class="collections">
+      <h2>Vår kollektioner</h2>
+      <div class="collection-grid">
+        <article class="collection-card gold">
+          <div class="overlay-text">Guld</div>
+          <img src="images/Collection_gold.png" alt="Gold Collection">
+        </article>
+        <article class="collection-card silver">
+          <div class="overlay-text">Silver</div>
+          <img src="images/Collection_silverr.png" alt="Silver Collection">
+        </article>
+        <article class="collection-card platinum">
+          <div class="overlay-text">Platinum</div>
+          <img src="images/Collection_plantium.png" alt="Platinum Collection">
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= -->
   <!-- FOOTER -->
   <!-- ============================= -->
-<footer class="site-footer">
-  <div class="footer-container">
-    <!-- About -->
- <div class="footer-about">
-  <div class="footer-logo">
-    <img src="/assets/My_logo.png" alt="Unique Jewelry Logo">
-  </div>
-  <h2>Unique Jewelry</h2>
-  <p>Utsökta smycken för alla tillfällen</p>
-</div>
-
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Snabblänkar</h4>
-      <ul>
-        <li><a href="#">Köp</a></li>
-        <li><a href="#">Samlingar</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Användarvillkor</a></li>
-      </ul>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="assets/My_logo.png" alt="Unique Jewelry Logo">
+        </div>
+        <h2>Unique Jewelry</h2>
+        <p>Utsökta smycken för alla tillfällen</p>
+      </div>
+      <div class="footer-links">
+        <h4>Snabblänkar</h4>
+        <ul>
+          <li><a href="#">Köp</a></li>
+          <li><a href="#">Samlingar</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Användarvillkor</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Connect</h4>
+        <p>Email: <a href="mailto:info@uniquejewelry.com">info@uniquejewelry.com</a></p>
+        <p>Phone: 07630501933</p>
+      </div>
     </div>
-
-    <!-- Connect -->
-    <div class="footer-contact">
-      <h4>Connect</h4>
-      <p>Email: <a href="mailtoinfo@uniquejewelry.com">info@uniquejewelry.com</a></p>
-      <p>Phone: 07630501933</p>
+    <div class="footer-bottom">
+      <p>© 2025 Unique Jewelry. All rights reserved.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>© 2025 Unique Jewelry. All rights reserved.</p>
-  </div>
-</footer>
-  <!-- //Dom Script Init -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('.splide', {
-      type      : 'loop',      // loopar slides
-      perPage   : 1,           // en bild åt gången
-      autoplay  : true,        // autoplay på
-      interval  : 3000,        // 5000 ms = 5 sekunder
-      pauseOnHover: true,      // pausa vid hover
-      pagination: true,        // visar punkter
-      arrows    : true,        // visar pilar
-    }).mount();
-  });
-// ==========================================
-  document.addEventListener('DOMContentLoaded', function () {
-  // Splide för New Arrivals
-  new Splide('.new-products-splide', {
-    type      : 'loop',
-    perPage   : 3,        // antal produkter synliga på desktop
-    perMove   : 1,
-    gap       : '1rem',
-    autoplay  : true,
-    interval  : 4000,
-    pauseOnHover: true,
-    arrows    : true,
-    pagination: false,
-    breakpoints: {
-      860: { perPage: 2 },
-      600: { perPage: 1 }
-    }
-  }).mount();
-});
-</script>
+  <!-- ============================= -->
+  <!-- SCRIPTS -->
+  <!-- ============================= -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hero slideshow
+      new Splide('.splide:not(.new-products-splide)', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        pagination: true,
+        arrows: true,
+      }).mount();
 
-
+      // New arrivals carousel
+      new Splide('.new-products-splide', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: '1rem',
+        autoplay: true,
+        interval: 4000,
+        pauseOnHover: true,
+        arrows: true,
+        pagination: false,
+        breakpoints: {
+          860: { perPage: 2 },
+          600: { perPage: 1 }
+        }
+      }).mount();
+    });
+  </script>
 </body>
 </html>
-
-
-
-

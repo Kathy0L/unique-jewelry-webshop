@@ -69,6 +69,10 @@ body {
 }
 /* ========================================================================= */
 /* CSS start här */
+
+body{
+    background-color:#F5E6CA;
+}
 /* ========== Nav BAR SECTION ========== */
 .nav-bar {
   position: sticky;
@@ -313,7 +317,7 @@ body {
 /* ================================================ */
 .collections {
   padding: 3rem 2rem;
-  background-color: #fff8f0;
+  background-color: #FFF0F5;
 }
 
 .collections h2 {
@@ -403,6 +407,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+  background-color: #FFF0F5;
+      padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Kort styling */
@@ -568,7 +575,7 @@ body {
 
 .splide__slide img {
   width: 100%;
-  height: 550px;           /* justera höjden efter behov */
+  height: 500px;           /* justera höjden efter behov */
   object-fit: cover;       /* så bilden fyller rutan utan att förvrängas */
 }
 
@@ -583,4 +590,82 @@ body {
   .splide__slide img {
     height: 250px;
   }
+}
+/* ================= */
+/* =========================
+   CTA Button
+   ========================= */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #c19a6b; /* varm guldfärg */
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #b28753;  /* mörkare guld */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.cta-button:focus {
+  outline: 3px solid #ffeb99; 
+  outline-offset: 3px;
+}
+
+/* Anpassning för mobil */
+@media (max-width: 600px) {
+  .cta-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Hero CTA */
+/* CTA button only for hero slideshow */
+.splide .hero-cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.splide .hero-cta .cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: transparent; /* no background */
+  color: #fff; /* white text */
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #fff; /* white border */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.splide .hero-cta .cta-button:hover {
+  background-color: #fff; /* white fill on hover */
+  color: #c19a6b; /* warm gold text on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 860px) {
+  .splide .hero-cta .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+
 }
