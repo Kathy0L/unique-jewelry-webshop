@@ -228,8 +228,9 @@ body {
 
   h2 { font-size: 1.4rem; }
 }
-
+/* ============================================== */
 /* ================= INFO CIRLES ================= */
+/* =============================================== */
 /* Sektion med info-ikoner och kort info */
 .info-circles {
   display: flex;
@@ -273,8 +274,9 @@ body {
   color: #666;
   line-height: 1.4;
 }
-
+/* ============================================ */
 /* ================= NEW ARRIVALS ================= */
+/* =========================================== */
 /* Sektion för nya produkter */
 .new-products {
   padding: 3rem 2rem;
@@ -323,8 +325,9 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
-
+/* ========================================= */
 /* ================= COLLECTIONS ================= */
+/* ============================================== */
 /* Sektion för kollektioner */
 .collections {
   padding: 3rem 2rem;
@@ -390,7 +393,9 @@ body {
   object-fit: cover;
 }
 
+/* ================================================= */
 /* ================= CATEGORY CARDS ================= */
+/* ================================================= */
 /* Grid för kategorier */
 .category-grid-rect {
   display: grid;
@@ -437,8 +442,9 @@ body {
   transform: scale(1.03);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
-
+/* ======================================== */
 /* ================= FOOTER ================= */
+/* ========================================== */
 /* Logo i footer */
 .footer-logo {
   text-align: center;
@@ -516,8 +522,9 @@ body {
   border-top: 1px solid #444;
   font-size: 0.85rem;
 }
-
+/* ================================================== */
 /* ================= SPLIDE CAROUSEL ================= */
+/* ================================================= */
 /* Carousel container */
 .splide {
   width: 100vw;
